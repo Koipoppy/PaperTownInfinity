@@ -1,0 +1,29 @@
+{
+  "defaults": {
+    "width": 1024,
+    "height": 1024,
+    "steps": 24,
+    "cfg": 1.0,
+    "guidance": 3.0,
+    "sampler": "euler",
+    "scheduler": "simple",
+    "negative": "text, watermark, signature, logo, letters, frame, border, shadow, ground, perspective, photorealistic, plastic, glossy, CGI, blurry, objects"
+  },
+  "prompts": [
+    {
+      "id": "paper_fibre",
+      "seed": 2101,
+      "prompt": "Seamless tileable macro scan of cream matte cardstock paper. Fine visible cellulose fibres, subtle mottling, tiny specks, completely flat even lighting, straight top-down view, no shadows, no objects, no folds, no edges, neutral warm white, high detail, photogrammetry texture."
+    },
+    {
+      "id": "paper_page",
+      "seed": 2102,
+      "prompt": "Seamless tileable scan of warm ivory book page paper with a soft aged tone. Fine paper fibre, faint flecks, very subtle warm unevenness, flat even lighting, top-down, no shadows, no objects, no text, no folds, high detail."
+    },
+    {
+      "id": "paper_wood",
+      "seed": 2103,
+      "prompt": "Seamless tileable top-down photograph of a dark walnut table surface. Fine straight wood grain, satin sheen, deep warm brown, flat even lighting, no objects, no shadows, no edges, high detail."
+    }
+  ]
+}

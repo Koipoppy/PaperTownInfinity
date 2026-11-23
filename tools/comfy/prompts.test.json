@@ -1,0 +1,39 @@
+{
+  "defaults": {
+    "width": 1024,
+    "height": 1024,
+    "steps": 30,
+    "cfg": 1.0,
+    "guidance": 3.4,
+    "sampler": "euler",
+    "scheduler": "simple",
+    "negative": "drop shadow, cast shadow, shadow, gradient background, 3D render, glossy, plastic, realistic, scene, diorama, multiple objects, text, watermark"
+  },
+  "prompts": [
+    {
+      "id": "tree_a",
+      "seed": 4101,
+      "prompt": "Single die-cut paper sticker of an autumn oak tree. Flat vector illustration, matte paper colors of rust orange, amber and gold. A thick continuous ivory cream outline runs all the way around the whole silhouette. Front orthographic view, centered with generous white margin, isolated on a plain pure white background, completely flat even lighting, no drop shadow, no cast shadow, no ground, no scene, no gradient, no texture, no text."
+    },
+    {
+      "id": "tree_b",
+      "seed": 4102,
+      "prompt": "Sticker design of one autumn oak tree. Bold continuous cream border around the entire shape, flat screen-printed paper colors, simple silhouette, front view, centered on pure white background, flat lighting, no shadow, no 3D depth, no background scene, no text."
+    },
+    {
+      "id": "tree_c",
+      "seed": 4103,
+      "prompt": "Handmade paper cutout of a single oak tree in autumn. Thick ivory paper border all around the silhouette, layered flat paper colors, front orthographic view, isolated on plain white background, soft flat light, absolutely no cast shadow, no ground, no background, no text."
+    },
+    {
+      "id": "tree_d",
+      "seed": 4104,
+      "prompt": "A papercraft sticker of an autumn oak tree, shown flat from the front. Wide cream die-cut edge around the whole tree, warm orange and gold paper leaves, dark brown trunk, matte flat colors, pure white background, even flat lighting, no shadow, no perspective, no scene, no text."
+    },
+    {
+      "id": "cat_a",
+      "seed": 4105,
+      "prompt": "Single die-cut paper sticker of a small sitting orange tabby cat. Flat vector illustration, warm orange and cream paper colors, a thick continuous ivory cream outline around the whole silhouette, front orthographic view, centered with generous white margin, isolated on a plain pure white background, completely flat even lighting, no drop shadow, no cast shadow, no ground, no scene, no gradient, no texture, no text."
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "defaults": {
+    "width": 1024,
+    "height": 1024,
+    "steps": 30,
+    "cfg": 1.0,
+    "guidance": 3.4,
+    "sampler": "euler",
+    "scheduler": "simple",
+    "negative": "drop shadow, cast shadow, shadow, gradient background, 3D render, glossy, plastic, realistic, scene, diorama, multiple objects, text, watermark"
+  },
+  "prompts": [
+    {
+      "id": "tree_oak",
+      "seed": 5001,
+      "prompt": "Single die-cut paper sticker of an autumn oak tree. Flat vector illustration, matte paper colors of rust orange, amber and gold leaves with a dark brown trunk. A thick continuous ivory cream outline runs all the way around the whole silhouette. Front orthographic view, centered with generous white margin, isolated on a plain pure white background, completely flat even lighting, no drop shadow, no cast shadow, no ground, no scene, no gradient, no texture, no text."
+    },
+    {
+      "id": "tree_pine",
+      "seed": 5002,
+      "prompt": "Single die-cut paper sticker of a tall pine tree. Flat vector illustration, matte paper colors of deep teal and forest green stacked tiers with a dark brown trunk. A thick continuous ivory cream outline runs all the way around the whole silhouette. Front orthographic view, centered with generous white margin, isolated on a plain pure white background, completely flat even lighting, no drop shadow, no cast shadow, no ground, no scene, no gradient, no texture, no text."
+    },
+    {
+      "id": "bush",
+      "seed": 5003,
+      "prompt": "Single die-cut paper sticker of a round garden bush. Flat vector illustration, matte paper colors of sage and olive green foliage with a few rust orange leaves. A thick continuous ivory cream outline runs all the way around the whole silhouette. Front orthographic view, centered with generous white margin, isolated on a plain pure white background, completely flat even lighting, no drop shadow, no cast shadow, no ground, no scene, no gradient, no texture, no text."
+    },
+    {
+      "id": "flowers",
+      "seed": 5004,
+      "prompt": "Single die-cut paper sticker of a small cluster of wildflowers. Flat vector illustration, matte paper colors of cream, coral and mustard petals on slender olive green stems. A continuous ivory cream outline runs all the way around the whole silhouette. Front orthographic view, centered with generous white margin, isolated on a plain pure white background, completely flat even lighting, no drop shadow, no cast shadow, no ground, no scene, no gradient, no texture, no text."
+    },
+    {
+      "id": "grass",
+      "seed": 5005,
+      "prompt": "Single die-cut paper sticker of a tuft of tall meadow grass. Flat vector illustration, matte paper colors of olive green and wheat blades. A continuous ivory cream outline runs all the way around the whole silhouette. Front orthographic view, centered with generous white margin, isolated on a plain pure white background, completely flat even lighting, no drop shadow, no cast shadow, no ground, no scene, no gradient, no texture, no text."
+    },
+    {
+      "id": "rock",
+      "seed": 5006,
+      "prompt": "Single die-cut paper sticker of a smooth rounded stone. Flat vector illustration, matte paper colors of warm grey and taupe with a few darker cracks. A thick continuous ivory cream outline runs all the way around the whole silhouette. Front orthographic view, centered with generous white margin, isolated on a plain pure white background, completely flat even lighting, no drop shadow, no cast shadow, no ground, no scene, no gradient, no texture, no text."
+    },
+    {
+      "id": "mushroom",
+      "seed": 5007,
+      "prompt": "Single die-cut paper sticker of a small red-capped mushroom with cream spots. Flat vector illustration, matte paper colors. A continuous ivory cream outline runs all the way around the whole silhouette. Front orthographic view, centered with generous white margin, isolated on a plain pure white background, completely flat even lighting, no drop shadow, no cast shadow, no ground, no scene, no gradient, no texture, no text."
+    },
+    {
+      "id": "reeds",
+      "seed": 5008,
+      "prompt": "Single die-cut paper sticker of a cluster of river reeds and cattails. Flat vector illustration, matte paper colors of olive green stems and brown cattail heads. A continuous ivory cream outline runs all the way around the whole silhouette. Front orthographic view, centered with generous white margin, isolated on a plain pure white background, completely flat even lighting, no drop shadow, no cast shadow, no ground, no scene, no gradient, no texture, no text."
+    },
+    {
+      "id": "lily",
+      "seed": 5009,
+      "prompt": "Single die-cut paper sticker of a round lily pad with a small notch. Flat vector illustration, matte paper colors of teal and sage green. A thick continuous ivory cream outline runs all the way around the whole silhouette. Flat top-down view, centered with generous white margin, isolated on a plain pure white background, completely flat even lighting, no drop shadow, no cast shadow, no water, no scene, no gradient, no texture, no text."
+    },
+    {
+      "id": "house_small",
+      "seed": 5010,
+      "prompt": "Single die-cut paper sticker of a small storybook cottage facade. Flat vector illustration, matte paper colors of cream walls, terracotta red gable roof, green door and warm windows. A thick continuous ivory cream outline runs all the way around the whole silhouette. Front orthographic view, centered with generous white margin, isolated on a plain pure white background, completely flat even lighting, no drop shadow, no cast shadow, no ground, no scene, no gradient, no texture, no text."
+    },
+    {
+      "id": "house_tall",
+      "seed": 5011,
+      "prompt": "Single die-cut paper sticker of a tall narrow storybook house facade. Flat vector illustration, matte paper colors of ochre walls, deep red gable roof, teal door and warm windows. A thick continuous ivory cream outline runs all the way around the whole silhouette. Front orthographic view, centered with generous white margin, isolated on a plain pure white background, completely flat even lighting, no drop shadow, no cast shadow, no ground, no scene, no gradient, no texture, no text."
+    },
+    {
+      "id": "windmill",
+      "seed": 5012,
+      "prompt": "Single die-cut paper sticker of a small storybook windmill. Flat vector illustration, matte paper colors of a cream tapered tower, red cap and four pale wooden blades. A thick continuous ivory cream outline runs all the way around the whole silhouette. Front orthographic view, centered with generous white margin, isolated on a plain pure white background, completely flat even lighting, no drop shadow, no cast shadow, no ground, no scene, no gradient, no texture, no text."
+    },
+    {
+      "id": "fence",
+      "seed": 5013,
+      "prompt": "Single die-cut paper sticker of a rustic wooden fence section. Flat vector illustration, matte paper colors of brown posts and rails. A continuous ivory cream outline runs all the way around the whole silhouette. Front orthographic view, centered with generous white margin, isolated on a plain pure white background, completely flat even lighting, no drop shadow, no cast shadow, no ground, no scene, no gradient, no texture, no text."
+    },
+    {
+      "id": "signpost",
+      "seed": 5014,
+      "prompt": "Single die-cut paper sticker of a wooden signpost with two arrow shaped signs. Flat vector illustration, matte paper colors of brown wood and cream sign faces. A continuous ivory cream outline runs all the way around the whole silhouette. Front orthographic view, centered with generous white margin, isolated on a plain pure white background, completely flat even lighting, no drop shadow, no cast shadow, no ground, no scene, no gradient, no texture, no text."
+    },
+    {
+      "id": "haystack",
+      "seed": 5015,
+      "prompt": "Single die-cut paper sticker of a rounded golden haystack. Flat vector illustration, matte paper colors of wheat and amber strands. A thick continuous ivory cream outline runs all the way around the whole silhouette. Front orthographic view, centered with generous white margin, isolated on a plain pure white background, completely flat even lighting, no drop shadow, no cast shadow, no ground, no scene, no gradient, no texture, no text."
+    },
+    {
+      "id": "cart",
+      "seed": 5016,
+      "prompt": "Single die-cut paper sticker of a small wooden hand cart with two wheels. Flat vector illustration, matte paper colors of brown boards and dark wheels. A continuous ivory cream outline runs all the way around the whole silhouette. Front orthographic view, centered with generous white margin, isolated on a plain pure white background, completely flat even lighting, no drop shadow, no cast shadow, no ground, no scene, no gradient, no texture, no text."
+    },
+    {
+      "id": "beehive",
+      "seed": 5017,
+      "prompt": "Single die-cut paper sticker of a straw beehive on a small wooden stand. Flat vector illustration, matte paper colors of golden woven straw and a dark entrance hole. A continuous ivory cream outline runs all the way around the whole silhouette. Front orthographic view, centered with generous white margin, isolated on a plain pure white background, completely flat even lighting, no drop shadow, no cast shadow, no ground, no scene, no gradient, no texture, no text."
+    },
+    {
+      "id": "lantern",
+      "seed": 5018,
+      "prompt": "Single die-cut paper sticker of a small wooden lantern post with a hanging amber lantern. Flat vector illustration, matte paper colors of dark brown wood and a softly glowing amber lantern. A continuous ivory cream outline runs all the way around the whole silhouette. Front orthographic view, centered with generous white margin, isolated on a plain pure white background, completely flat even lighting, no drop shadow, no cast shadow, no ground, no scene, no gradient, no texture, no text."
+    },
+    {
+      "id": "cat",
+      "seed": 5019,
+      "prompt": "Single die-cut paper sticker of a small sitting orange tabby cat. Flat vector illustration, matte paper colors of warm orange and cream. A thick continuous ivory cream outline runs all the way around the whole silhouette. Front orthographic view, centered with generous white margin, isolated on a plain pure white background, completely flat even lighting, no drop shadow, no cast shadow, no ground, no scene, no gradient, no texture, no text."
+    },
+    {
+      "id": "dog",
+      "seed": 5020,
+      "prompt": "Single die-cut paper sticker of a small standing cream and brown dog. Flat vector illustration, matte paper colors. A thick continuous ivory cream outline runs all the way around the whole silhouette. Front orthographic view, centered with generous white margin, isolated on a plain pure white background, completely flat even lighting, no drop shadow, no cast shadow, no ground, no scene, no gradient, no texture, no text."
+    },
+    {
+      "id": "sheep",
+      "seed": 5021,
+      "prompt": "Single die-cut paper sticker of a small fluffy cream sheep. Flat vector illustration, matte paper colors of cream wool and a dark face and legs. A thick continuous ivory cream outline runs all the way around the whole silhouette. Front orthographic view, centered with generous white margin, isolated on a plain pure white background, completely flat even lighting, no drop shadow, no cast shadow, no ground, no scene, no gradient, no texture, no text."
+    },
+    {
+      "id": "duck",
+      "seed": 5022,
+      "prompt": "Single die-cut paper sticker of a small duck. Flat vector illustration, matte paper colors of a teal green head, cream body and orange beak. A continuous ivory cream outline runs all the way around the whole silhouette. Front orthographic view, centered with generous white margin, isolated on a plain pure white background, completely flat even lighting, no drop shadow, no cast shadow, no ground, no scene, no gradient, no texture, no text."
+    },
+    {
+      "id": "bridge",
+      "seed": 5023,
+      "prompt": "Single die-cut paper sticker of a small arched stone bridge, side view. Flat vector illustration, matte paper colors of warm grey stones and a cream path on top. A thick continuous ivory cream outline runs all the way around the whole silhouette. Front orthographic side view, centered with generous white margin, isolated on a plain pure white background, completely flat even lighting, no drop shadow, no cast shadow, no ground, no scene, no water, no gradient, no texture, no text."
+    }
+  ]
+}

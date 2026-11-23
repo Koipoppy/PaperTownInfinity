@@ -1,0 +1,24 @@
+{
+  "name": "popup-atlas",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Pop-up Atlas - an endless interactive pop-up book world in Three.js",
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "assets:concepts": "node tools/comfy/generate.mjs tools/comfy/prompts.concepts.json assets_src/concepts",
+    "assets:props": "node tools/comfy/generate.mjs tools/comfy/prompts.props.json assets_src/props",
+    "assets:paper": "node tools/comfy/generate.mjs tools/comfy/prompts.paper.json assets_src/paper"
+  },
+  "dependencies": {
+    "three": "0.187.0"
+  },
+  "devDependencies": {
+    "@types/three": "0.187.0",
+    "typescript": "^5.9.3",
+    "vite": "^8.3.8"
+  }
+}

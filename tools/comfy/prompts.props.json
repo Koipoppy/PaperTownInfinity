@@ -1,0 +1,129 @@
+{
+  "defaults": {
+    "width": 1024,
+    "height": 1024,
+    "steps": 24,
+    "cfg": 1.0,
+    "guidance": 3.0,
+    "sampler": "euler",
+    "scheduler": "simple",
+    "negative": "text, watermark, signature, logo, letters, frame, border, shadow, ground, floor, scene, diorama, perspective, photorealistic, plastic, glossy, CGI, blurry, cropped, multiple objects"
+  },
+  "prompts": [
+    {
+      "id": "tree_oak",
+      "seed": 3101,
+      "prompt": "A single paper cutout of an autumn oak tree, die-cut sticker style. Round layered canopy made of rust orange, amber and golden paper leaves, a dark brown paper trunk, thick dark ink outline, visible matte cardstock fibre and a thin cream cut edge. Flat front orthographic view, whole tree centered and fully visible, isolated on a plain solid pure white background, no shadow, no ground, no scene, no other objects, no text."
+    },
+    {
+      "id": "tree_pine",
+      "seed": 3102,
+      "prompt": "A single paper cutout of a tall pine tree, die-cut sticker style. Three stacked jagged layers of deep teal and forest green paper, dark brown paper trunk, thick dark ink outline, visible matte cardstock fibre and a thin cream cut edge. Flat front orthographic view, whole tree centered and fully visible, isolated on a plain solid pure white background, no shadow, no ground, no scene, no other objects, no text."
+    },
+    {
+      "id": "bush",
+      "seed": 3103,
+      "prompt": "A single paper cutout of a round garden bush, die-cut sticker style. Layered sage and olive green paper foliage with a few rust orange leaves, thick dark ink outline, visible matte cardstock fibre and a thin cream cut edge. Flat front orthographic view, whole bush centered and fully visible, isolated on a plain solid pure white background, no shadow, no ground, no scene, no other objects, no text."
+    },
+    {
+      "id": "flowers",
+      "seed": 3104,
+      "prompt": "A single paper cutout of a small cluster of wildflowers, die-cut sticker style. Cream, coral and mustard paper petals on slender olive green stems, thick dark ink outline, visible matte cardstock fibre. Flat front orthographic view, whole cluster centered and fully visible, isolated on a plain solid pure white background, no shadow, no ground, no scene, no other objects, no text."
+    },
+    {
+      "id": "grass",
+      "seed": 3105,
+      "prompt": "A single paper cutout of a tuft of tall meadow grass, die-cut sticker style. Slender olive green and wheat coloured paper blades, thick dark ink outline, visible matte cardstock fibre. Flat front orthographic view, whole tuft centered and fully visible, isolated on a plain solid pure white background, no shadow, no ground, no scene, no other objects, no text."
+    },
+    {
+      "id": "rock",
+      "seed": 3106,
+      "prompt": "A single paper cutout of a smooth rounded stone, die-cut sticker style. Warm grey and taupe layered paper, a few darker cracks, thick dark ink outline, visible matte cardstock fibre and a thin cream cut edge. Flat front orthographic view, whole stone centered and fully visible, isolated on a plain solid pure white background, no shadow, no ground, no scene, no other objects, no text."
+    },
+    {
+      "id": "mushroom",
+      "seed": 3107,
+      "prompt": "A single paper cutout of a small red-capped mushroom with cream spots, die-cut sticker style. Cream paper stem, thick dark ink outline, visible matte cardstock fibre. Flat front orthographic view, whole mushroom centered and fully visible, isolated on a plain solid pure white background, no shadow, no ground, no scene, no other objects, no text."
+    },
+    {
+      "id": "reeds",
+      "seed": 3108,
+      "prompt": "A single paper cutout of a cluster of river reeds and cattails, die-cut sticker style. Slender olive green paper stems, brown paper cattail heads, thick dark ink outline, visible matte cardstock fibre. Flat front orthographic view, whole cluster centered and fully visible, isolated on a plain solid pure white background, no shadow, no ground, no scene, no other objects, no text."
+    },
+    {
+      "id": "lily",
+      "seed": 3109,
+      "prompt": "A single paper cutout of a round lily pad with a small notch, die-cut sticker style. Teal and sage green layered paper, faint darker veins, thick dark ink outline, visible matte cardstock fibre. Flat top-down view, whole lily pad centered and fully visible, isolated on a plain solid pure white background, no shadow, no water, no scene, no other objects, no text."
+    },
+    {
+      "id": "house_small",
+      "seed": 3110,
+      "prompt": "A single paper cutout of a small storybook cottage facade, die-cut sticker style. Cream plaster paper walls, terracotta red gable roof, green paper door, two warm windows, thick dark ink outline, visible matte cardstock fibre and a thin cream cut edge. Flat front orthographic view, whole cottage centered and fully visible, isolated on a plain solid pure white background, no shadow, no ground, no scene, no other objects, no text."
+    },
+    {
+      "id": "house_tall",
+      "seed": 3111,
+      "prompt": "A single paper cutout of a tall narrow storybook house facade, die-cut sticker style. Ochre paper walls, deep red gable roof, teal door, three warm windows, thick dark ink outline, visible matte cardstock fibre. Flat front orthographic view, whole house centered and fully visible, isolated on a plain solid pure white background, no shadow, no ground, no scene, no other objects, no text."
+    },
+    {
+      "id": "windmill",
+      "seed": 3112,
+      "prompt": "A single paper cutout of a small storybook windmill, die-cut sticker style. Cream tapered tower, red cap, four pale wooden blades, thick dark ink outline, visible matte cardstock fibre. Flat front orthographic view, whole windmill centered and fully visible, isolated on a plain solid pure white background, no shadow, no ground, no scene, no other objects, no text."
+    },
+    {
+      "id": "fence",
+      "seed": 3113,
+      "prompt": "A single paper cutout of a rustic wooden fence section, die-cut sticker style. Three brown paper posts and two horizontal rails, thick dark ink outline, visible matte cardstock fibre. Flat front orthographic view, whole fence centered and fully visible, isolated on a plain solid pure white background, no shadow, no ground, no scene, no other objects, no text."
+    },
+    {
+      "id": "signpost",
+      "seed": 3114,
+      "prompt": "A single paper cutout of a wooden signpost, die-cut sticker style. Brown paper post with two arrow shaped signs pointing opposite ways, cream painted faces, thick dark ink outline, visible matte cardstock fibre. Flat front orthographic view, whole signpost centered and fully visible, isolated on a plain solid pure white background, no shadow, no ground, no scene, no other objects, no text."
+    },
+    {
+      "id": "haystack",
+      "seed": 3115,
+      "prompt": "A single paper cutout of a rounded golden haystack, die-cut sticker style. Layered wheat and amber paper strands, thick dark ink outline, visible matte cardstock fibre. Flat front orthographic view, whole haystack centered and fully visible, isolated on a plain solid pure white background, no shadow, no ground, no scene, no other objects, no text."
+    },
+    {
+      "id": "cart",
+      "seed": 3116,
+      "prompt": "A single paper cutout of a small wooden hand cart, die-cut sticker style. Brown paper boards, two dark round wheels, thick dark ink outline, visible matte cardstock fibre. Flat front orthographic view, whole cart centered and fully visible, isolated on a plain solid pure white background, no shadow, no ground, no scene, no other objects, no text."
+    },
+    {
+      "id": "beehive",
+      "seed": 3117,
+      "prompt": "A single paper cutout of a straw beehive on a small wooden stand, die-cut sticker style. Golden woven paper dome, dark entrance hole, thick dark ink outline, visible matte cardstock fibre. Flat front orthographic view, whole beehive centered and fully visible, isolated on a plain solid pure white background, no shadow, no ground, no scene, no other objects, no text."
+    },
+    {
+      "id": "lantern",
+      "seed": 3118,
+      "prompt": "A single paper cutout of a small wooden lantern post, die-cut sticker style. Dark brown paper post with a hanging amber paper lantern glowing softly, thick dark ink outline, visible matte cardstock fibre. Flat front orthographic view, whole lantern centered and fully visible, isolated on a plain solid pure white background, no shadow, no ground, no scene, no other objects, no text."
+    },
+    {
+      "id": "cat",
+      "seed": 3119,
+      "prompt": "A single paper cutout of a small sitting orange tabby cat, die-cut sticker style. Layered orange and cream paper, simple paper-cut face, thick dark ink outline, visible matte cardstock fibre. Flat front orthographic view, whole cat centered and fully visible, isolated on a plain solid pure white background, no shadow, no ground, no scene, no other objects, no text."
+    },
+    {
+      "id": "dog",
+      "seed": 3120,
+      "prompt": "A single paper cutout of a small standing cream and brown dog, die-cut sticker style. Layered paper fur patches, simple paper-cut face, thick dark ink outline, visible matte cardstock fibre. Flat front orthographic view, whole dog centered and fully visible, isolated on a plain solid pure white background, no shadow, no ground, no scene, no other objects, no text."
+    },
+    {
+      "id": "sheep",
+      "seed": 3121,
+      "prompt": "A single paper cutout of a small fluffy cream sheep, die-cut sticker style. Layered cream paper wool, dark paper face and legs, thick dark ink outline, visible matte cardstock fibre. Flat front orthographic view, whole sheep centered and fully visible, isolated on a plain solid pure white background, no shadow, no ground, no scene, no other objects, no text."
+    },
+    {
+      "id": "duck",
+      "seed": 3122,
+      "prompt": "A single paper cutout of a small duck, die-cut sticker style. Teal green paper head, cream paper body, orange paper beak, thick dark ink outline, visible matte cardstock fibre. Flat front orthographic view, whole duck centered and fully visible, isolated on a plain solid pure white background, no shadow, no ground, no scene, no other objects, no text."
+    },
+    {
+      "id": "bridge",
+      "seed": 3123,
+      "prompt": "A single paper cutout of a small arched stone bridge, die-cut sticker style. Warm grey and taupe paper stones, cream path on top, thick dark ink outline, visible matte cardstock fibre. Flat front orthographic side view, whole bridge centered and fully visible, isolated on a plain solid pure white background, no shadow, no ground, no scene, no water, no other objects, no text."
+    }
+  ]
+}

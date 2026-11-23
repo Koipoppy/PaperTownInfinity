@@ -1,0 +1,44 @@
+{
+  "defaults": {
+    "width": 1216,
+    "height": 832,
+    "steps": 28,
+    "cfg": 1.0,
+    "guidance": 3.5,
+    "sampler": "euler",
+    "scheduler": "simple",
+    "negative": "text, watermark, signature, logo, letters, frame, border, photorealistic human, plastic, glossy, CGI, oversaturated, cluttered, deformed"
+  },
+  "prompts": [
+    {
+      "id": "concept_01_hero",
+      "seed": 1101,
+      "prompt": "Tilt-shift macro photograph of a handmade pop-up book diorama. An endless warm cream paper page fills the frame, with a winding pale paper trail through layered cut-paper autumn trees, tiny red-roofed cottages, a small arched bridge over a teal paper river, and a tiny paper traveller in a straw hat walking the trail. Visible matte cardstock fibre, cut paper edges, soft shadows between layers, miniature tilt-shift depth of field, warm golden key light, cool blue fill, dark walnut table blurred in the corners, cozy storybook atmosphere. No text, no letters, no border."
+    },
+    {
+      "id": "concept_02_village",
+      "seed": 1102,
+      "prompt": "High-angle tilt-shift photograph of a papercraft village diorama on an open cream book page. A cluster of small red and ochre roofed paper houses with glowing windows, a winding cream paper path, little paper lantern posts, autumn cut-paper trees, tiny paper animals, layered cardstock, visible fibre and cut edges, soft warm afternoon light, strong miniature depth of field, handcrafted storybook atmosphere, no text."
+    },
+    {
+      "id": "concept_03_forest",
+      "seed": 1103,
+      "prompt": "Tilt-shift macro photograph of an endless pop-up book forest: dense layered cut-paper pines and round autumn trees rising from a flat cream page, a narrow winding paper trail, scattered fallen paper leaves, tiny moss and mushroom cutouts, a small paper traveller seen from above walking between the trees, matte cardstock, visible paper fibre and layered edges, soft warm light with cool shadows, shallow depth of field, no text."
+    },
+    {
+      "id": "concept_04_river",
+      "seed": 1104,
+      "prompt": "Tilt-shift photograph of a handmade paper river diorama on an open book page. Layered teal and pale blue cut-paper water, gentle paper waves, an arched wooden-paper bridge carrying a cream trail across the river, reeds and lily pads, two tiny paper ducks, a paper traveller crossing the bridge, surrounding autumn trees and stones, visible cardstock fibre and cut edges, warm key light, cool reflections, strong miniature depth of field, no text."
+    },
+    {
+      "id": "concept_05_night",
+      "seed": 1105,
+      "prompt": "Tilt-shift photograph of a pop-up paper village at night on an open book page. Deep indigo paper sky, warm glowing paper lanterns and lit cottage windows casting pools of amber light, fireflies as tiny gold flecks, layered cut-paper trees and rooftops in cool moonlight, a tiny paper traveller with a lantern walking the trail, matte cardstock, visible fibre, soft shadows, dramatic miniature depth of field, cozy and magical, no text."
+    },
+    {
+      "id": "concept_06_traveller",
+      "seed": 1106,
+      "prompt": "Macro photograph of a tiny handmade paper traveller doll walking on a cream paper page. Straw hat, cream shirt, red satchel, simple paper-cut face, jointed paper limbs, surrounded by layered paper-cut autumn trees and grass tufts, warm rim light, shallow depth of field, visible paper fibre and cut edges, handcrafted storybook character, no text."
+    }
+  ]
+}
