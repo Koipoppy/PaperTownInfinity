@@ -21,7 +21,6 @@ interface Templates {
   cottage: MergedTemplate;
   cottageB?: MergedTemplate;
   tall?: MergedTemplate;
-  bridge?: MergedTemplate;
 }
 
 let templates: Templates | null = null;
@@ -124,26 +123,12 @@ export async function loadHouseTemplates(url: string): Promise<boolean> {
     const gltf = await new GLTFLoader().loadAsync(url);
     const houseRoot = gltf.scene.getObjectByName('house') ?? null;
     const villageRoot = gltf.scene.getObjectByName('village') ?? null;
-    const bridgeRoot = gltf.scene.getObjectByName('bridge') ?? null;
     const cottage = extract(houseRoot, 'house__house');
     if (!cottage) return false;
-    const bridge = extract(
-      bridgeRoot,
-      'bridge__',
-      'bridge__base',
-      (name) => /bush|flower|reed|rock/i.test(name),
-    );
-    if (bridge) {
-      // The reference deck profile peaks at ~0.2 model units; keep the walk height in sync.
-      const span = 3.0;
-      const sz = span / Math.max(0.001, bridge.depth);
-      bridgeDeckPeak = 0.2009 * sz * 0.65;
-    }
     templates = {
       cottage,
       cottageB: extract(villageRoot, 'village__cottage_a') ?? undefined,
       tall: extract(villageRoot, 'village__house_w') ?? undefined,
-      bridge: bridge ?? undefined,
     };
     return true;
   } catch (err) {
@@ -210,63 +195,92 @@ export function makeHouse(
   return group;
 }
 
-/** A static, walkable multi-piece arch bridge, axis along Z, spanning the E-W river. */
-export function makeBridge(mats: MaterialLib): THREE.Group | null {
-  if (!templates?.bridge) return null;
-  const t = templates.bridge;
-  const span = 3.0;
-  const sz = span / Math.max(0.001, t.depth);
-  const sx = sz * 1.35;
-  const sy = sz * 0.65;
-
-  // Uniform warm stone paper: the reference side walls are otherwise much darker than the deck.
-  const model = new THREE.Group();
-  const stonePaper = mats.paper('#d8c7a0');
-  if (t.paper) {
-    const mesh = new THREE.Mesh(t.paper, stonePaper);
-    mesh.castShadow = true;
-    mesh.receiveShadow = true;
-    model.add(mesh);
-  }
-  if (t.glow) {
-    const mesh = new THREE.Mesh(t.glow, mats.windowGlow);
-    mesh.receiveShadow = true;
-    model.add(mesh);
-  }
-  model.scale.set(sx, sy, sz);
-  model.position.set(-t.centerX * sx, -t.minY * sy, -t.centerZ * sz);
-
+/** A static, walkable multi-sheet paper arch bridge, axis along Z, built for the fixed high camera. */
+export function makeBridge(mats: MaterialLib): THREE.Group {
+  bridgeDeckPeak = 0.34;
   const group = new THREE.Group();
-  group.add(model);
+  const stone = mats.paper('#b9aa8c');
+  const stoneLight = mats.paper('#cdbf9f');
+  const deckMat = mats.paper('#e2d3ae');
+  const railMat = mats.paper('#8a6a4a');
+  const width = 2.0;
+  const deckY = bridgeDeckPeak;
 
-  // Thin stone abutments hide the open underside at the two banks.
-  const abutmentMat = mats.paper('#c9b78f');
-  for (const z of [-span * 0.36, span * 0.36]) {
-    const abutment = new THREE.Mesh(new THREE.BoxGeometry(1.5, 0.16, 0.35), abutmentMat);
-    abutment.position.set(0, 0.08, z);
+  const deck = new THREE.Mesh(new THREE.BoxGeometry(width, 0.07, 2.6), deckMat);
+  deck.position.y = deckY;
+  deck.castShadow = true;
+  deck.receiveShadow = true;
+  group.add(deck);
+
+  // Two paper ramps connect the deck to the banks.
+  const rampAngle = Math.atan2(deckY, 0.9);
+  for (const sign of [-1, 1]) {
+    const ramp = new THREE.Mesh(new THREE.BoxGeometry(width, 0.06, 0.95), deckMat);
+    ramp.position.set(0, deckY * 0.5, sign * 1.55);
+    ramp.rotation.x = sign * rampAngle;
+    ramp.castShadow = true;
+    ramp.receiveShadow = true;
+    group.add(ramp);
+  }
+
+  // Stone arch faces: the south-facing face is what the game camera sees, so the hole
+  // frames the water rather than a flat block.
+  const faceW = width;
+  const faceH = 0.34;
+  const archR = 0.27;
+  const archCy = 0.04;
+  const t = 0.08;
+  const shape = new THREE.Shape();
+  shape.moveTo(-faceW / 2, 0);
+  shape.lineTo(faceW / 2, 0);
+  shape.lineTo(faceW / 2, faceH);
+  shape.lineTo(-faceW / 2, faceH);
+  shape.closePath();
+  const hole = new THREE.Path();
+  hole.moveTo(-archR, 0.005);
+  hole.lineTo(-archR, archCy);
+  hole.absarc(0, archCy, archR, Math.PI, 0, true);
+  hole.lineTo(archR, 0.005);
+  hole.closePath();
+  shape.holes.push(hole);
+  const faceGeo = new THREE.ExtrudeGeometry(shape, {
+    depth: t,
+    bevelEnabled: false,
+    curveSegments: 20,
+  });
+  faceGeo.translate(0, 0, -t / 2);
+  for (const z of [-0.55, 0.55]) {
+    const face = new THREE.Mesh(faceGeo, stone);
+    face.position.z = z;
+    face.castShadow = true;
+    face.receiveShadow = true;
+    group.add(face);
+  }
+
+  // Abutments under the ramps.
+  for (const z of [-1.2, 1.2]) {
+    const abutment = new THREE.Mesh(new THREE.BoxGeometry(width, 0.22, 0.5), stoneLight);
+    abutment.position.set(0, 0.11, z);
     abutment.castShadow = true;
     abutment.receiveShadow = true;
     group.add(abutment);
   }
 
-  // Low parapets and paper rails make the deck read as a walkway from the high camera.
-  const deckY = bridgeDeckPeak;
-  const parapetMat = mats.paper('#c9b78f');
-  const railMat = mats.paper('#8a6a4a');
-  for (const x of [-0.78, 0.78]) {
-    const parapet = new THREE.Mesh(new THREE.BoxGeometry(0.07, 0.1, 2.2), parapetMat);
-    parapet.position.set(x, deckY, 0);
+  // Parapets and paper rails along the deck.
+  for (const x of [-0.95, 0.95]) {
+    const parapet = new THREE.Mesh(new THREE.BoxGeometry(0.08, 0.1, 2.4), stoneLight);
+    parapet.position.set(x, deckY + 0.05, 0);
     parapet.castShadow = true;
     parapet.receiveShadow = true;
     group.add(parapet);
-    for (const z of [-0.95, -0.3, 0.3, 0.95]) {
-      const post = new THREE.Mesh(new THREE.BoxGeometry(0.035, 0.17, 0.035), railMat);
-      post.position.set(x, deckY + 0.1, z);
+    for (const z of [-1.0, -0.5, 0, 0.5, 1.0]) {
+      const post = new THREE.Mesh(new THREE.BoxGeometry(0.035, 0.18, 0.035), railMat);
+      post.position.set(x, deckY + 0.14, z);
       post.castShadow = true;
       group.add(post);
     }
-    const rail = new THREE.Mesh(new THREE.BoxGeometry(0.028, 0.028, 2.0), railMat);
-    rail.position.set(x, deckY + 0.2, 0);
+    const rail = new THREE.Mesh(new THREE.BoxGeometry(0.028, 0.028, 2.2), railMat);
+    rail.position.set(x, deckY + 0.24, 0);
     rail.castShadow = true;
     group.add(rail);
   }

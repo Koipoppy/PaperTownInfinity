@@ -7,10 +7,11 @@
   `REFERENCE/` checkout is not part of the build and is excluded from git. This
   project's source code is an original implementation; no upstream source files
   are imported by `src/`.
-- The multi-piece 3D houses and arch bridge are extracted at runtime from Papertrails'
-  `tiles.glb` (MIT): the `house__house_*`, `village__cottage_a_*`,
-  `village__house_w_*` and `bridge__*` nodes (bridge base excluded). The asset is
-  copied to `public/models/tiles.glb` and credited here under the upstream MIT license.
+- The multi-piece 3D houses are extracted at runtime from Papertrails'
+  `tiles.glb` (MIT): the `house__house_*`, `village__cottage_a_*` and
+  `village__house_w_*` nodes. The asset is copied to `public/models/tiles.glb`
+  and credited here under the upstream MIT license. The arch bridge is our own
+  multi-sheet paper model inspired by the reference bridge's proportions.
 - The house roof/wall/door artwork is sampled from Papertrails'
   `textures/art/atlas.webp` (MIT) via glTF `TEXCOORD_1`
   (`public/textures/art/atlas.webp`).
